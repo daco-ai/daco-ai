@@ -1,0 +1,212 @@
+.main-skintest {
+  &__card {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+  }
+
+  &__title {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+  }
+
+  &__frame {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 6px;
+    position: relative;
+  }
+
+  &__text-wrapper {
+    color: #ffffff;
+    font-family: "Pretendard Variable-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0&__4px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+
+  &__div {
+    color: #c4c4c4;
+    font-family: "Pretendard Variable-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0&__28px;
+    line-height: 20px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+
+  &__img {
+    align-self: stretch;
+    background-color: #121212;
+    height: 586px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  &__overlap-group {
+    height: 604px;
+    position: relative;
+    top: -18px;
+    width: 360px;
+  }
+
+  &__img-2 {
+    height: 501px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 360px;
+  }
+
+  &__img-3 {
+    height: 483px;
+    left: 0;
+    position: absolute;
+    top: 18px;
+    width: 360px;
+  }
+
+  &__txt {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    left: 0;
+    padding: 16px 20px 30px;
+    position: absolute;
+    top: 320px;
+    width: 360px;
+  }
+
+  &__card-group {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    gap: 10px;
+    height: 170px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__card {
+    -webkit-backdrop-filter: blur(10px) brightness(100%);
+    align-items: flex-start;
+    align-self: stretch;
+    backdrop-filter: blur(10px) brightness(100%);
+    background-color: #ffffff33;
+    border-radius: 4px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 14px;
+    position: relative;
+  }
+
+  &__icon-container {
+    align-self: stretch;
+    flex: 0 0 auto;
+    position: relative;
+    width: 100%;
+  }
+
+  &__txt-2 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__div-wrapper {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  &__text-wrapper-2 {
+    align-self: stretch;
+    color: #ffffff;
+    font-family: "Pretendard-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0&__32px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+  }
+
+  &__p {
+    align-self: stretch;
+    color: #bdbdbd;
+    font-family: "Pretendard-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0&__28px;
+    line-height: 21px;
+    margin-top: -1px;
+    position: relative;
+  }
+
+  &__btn {
+    all: unset;
+    align-items: center;
+    align-self: stretch;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    height: 48px;
+    justify-content: center;
+    padding: 14px 12px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__depth-frame {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__text-wrapper-3 {
+    align-self: stretch;
+    color: #121212;
+    font-family: "Pretendard-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0&__32px;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+  }
+}

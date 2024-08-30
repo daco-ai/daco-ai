@@ -5,7 +5,7 @@ import TestHeader from "../components/common/TestHeader";
 export default function TestIntro() {
   return (
     <div className="test__start">
-      <TestHeader title={"피부 진단"} />
+      <TestHeader isDark={false} title={"피부 진단"} />
       <div className="text-group">
         <p className="title">피부 진단 시작하기</p>
 
@@ -18,8 +18,8 @@ export default function TestIntro() {
         </p>
       </div>
       <div className="btn-group">
-        <Button full={true} text={"시작하기"} color={"white"} />
-        <Button full={true} text={"뒤로가기"} color={"black"} />
+        <Button full={true} text={"시작하기"} color={"white"} func="" />
+        <Button full={true} text={"뒤로가기"} color={"black"} func="" />
       </div>
     </div>
   );

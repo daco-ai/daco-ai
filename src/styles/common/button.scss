@@ -1,0 +1,62 @@
+.btn-group {
+  width: 90%;
+  margin: 46px auto;
+  .btn {
+    padding: 18px 0px;
+  }
+  .btn-white {
+    align-items: center;
+    align-self: stretch;
+    background-color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    white-space: nowrap;
+    line-height: 100%;
+    margin-bottom: 12px;
+  }
+
+  .btn-black {
+    border: 1px solid;
+    border-color: #9a9a9a;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 100%;
+    white-space: nowrap;
+    background-color: black;
+  }
+  .btn-gray {
+    align-items: center;
+    align-self: stretch;
+    background-color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    white-space: nowrap;
+    line-height: 100%;
+    margin-bottom: 12px;
+    border: 1px solid #8c8c8c;
+    color: #8c8c8c;
+  }
+  .btn-half {
+    width: 48%;
+    display: inline-block;
+    margin-bottom: unset;
+  }
+  .btn-half.btn-white,
+  .btn-half.btn-gray {
+    margin-right: 4%;
+  }
+}

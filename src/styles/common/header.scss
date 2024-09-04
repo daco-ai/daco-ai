@@ -1,0 +1,95 @@
+.header {
+  height: 60px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+  padding: 0 20px;
+
+  .text-wrapper {
+    color: #ffffff;
+    font-family: "Raleway-Regular", Helvetica;
+    font-size: 21px;
+    font-weight: 400;
+    left: 160px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 17px;
+    white-space: nowrap;
+  }
+
+  .frame {
+    height: 24px;
+    left: 282px;
+    position: absolute;
+    top: 18px;
+    width: 58px;
+  }
+
+  /* 왼쪽 */
+  .header__left {
+    height: 24px;
+    position: relative;
+    width: 24px;
+
+    .header__left-icon {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .header__right {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    position: relative;
+    .header__profile-icon,
+    .header__shopping-bag {
+      height: 24px;
+      position: relative;
+      width: 24px;
+    }
+  }
+  /* 로고 */
+  .header__logo {
+    height: 25px;
+    width: 42px;
+    margin-left: 116px;
+    margin-right: 80px;
+    color: #ffffff;
+    font-family: "Raleway-Regular", Helvetica;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+}
+
+.header__test {
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+  width: inherit;
+  position: relative;
+  .header__title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 18px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    &.header__title__black {
+      color: #121212 !important;
+    }
+  }
+}

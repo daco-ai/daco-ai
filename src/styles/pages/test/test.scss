@@ -162,6 +162,20 @@
             width: 100%;
             padding: 14px 20px;
           }
+          .answer-button.selected {
+            border-color: #f4914b;
+            color: #f4914b;
+            &::after {
+              content: url("/public/images/test__icon_radio_on.svg");
+              position: absolute;
+              right: 20px;
+              top: 50%;
+              transform: translateY(-50%);
+
+              width: 25px;
+              height: 25px;
+            }
+          }
         }
       }
     }

@@ -3,6 +3,7 @@ import { devtools } from "zustand/middleware";
 
 const store = (set) => ({
   page: 0,
+  setPage: (newPage) => set({ page: newPage }),
   increasePage: () => set((state) => ({ page: state.page + 1 })),
   decreasePage: () => set((state) => ({ page: state.page - 1 })),
   resetPage: () => set({ page: 0 }),

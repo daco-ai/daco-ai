@@ -7,7 +7,6 @@ import useStore from "../stauts/store";
 import Question from "../components/test/Question";
 
 export default function Test() {
-  const [categoryScores, setCategoryScores] = useState({});
   const { page, increasePage, resetPage } = useStore((state) => ({
     page: state.page,
     increasePage: state.increasePage,
@@ -21,29 +20,28 @@ export default function Test() {
   const currentCategory = Data.categories[currentCategoryIndex];
   const currentQuestion = currentCategory?.questions[currentQuestionIndex];
 
-  const handleAnswerSelected = (score) => {
-    console.log("Selected score:", currentQuestion);
-  };
-  console.log(currentCategoryIndex);
   return (
     <div className="test__process">
       <TestHeader isDark={true} title={"피부 진단"} />
-      <div className="prograss-bar"></div>
+      <div className="content__box">
+        <div className="top__group">
+          <div className="progress-bar">
+            <div
+              className="progress"
+              style={{
+                width: `${(page / Data.length) * 100}%`,
+              }}
+            ></div>
+          </div>
 
-      {currentQuestion && (
-        <Question
-          questionData={currentQuestion}
-          onAnswerSelected={handleAnswerSelected}
-        />
-      )}
-      <div className="btn-group">
-        <Button full={false} text={"이전"} color={"gray"} func="" />
-        <Button
-          full={false}
-          text={"다음"}
-          color={"black"}
-          func={handleAnswerSelected}
-        />
+          {currentQuestion && (
+            <Question page={page} questionData={currentQuestion} />
+          )}
+        </div>
+        <div className="btn-group">
+          <Button full={false} text={"이전"} color={"gray"} func="" />
+          <Button full={false} text={"다음"} color={"black"} func="" />
+        </div>
       </div>
     </div>
   );

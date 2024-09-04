@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-const AnswerButton = ({ text, score, onSelect }) => {
+const AnswerButton = ({ index, text, score }) => {
+  const [scores, setScores] = useState({});
+  const handleAnswerSelected = (category, questionIndex, score) => {
+    console.log("???", scores);
+    setScores((prevScores) => {
+      const categoryScores = { ...prevScores[category] };
+      categoryScores[questionIndex] =
+        (categoryScores[questionIndex] || 0) + score;
+      return { ...prevScores, [category]: categoryScores };
+    });
+  };
   return (
-    <button onClick={() => onSelect(score)} className="answer-button">
+    <div
+      onClick={(score) => handleAnswerSelected(text, index, score)}
+      className="answer-button"
+    >
       {text}
-    </button>
+    </div>
   );
 };
 

@@ -6,10 +6,17 @@ import Header from "./components/common/Header";
 import useStore from "./stauts/store";
 import Test from "./pages/test";
 import TestResult from "./pages/testResult";
+import { useEffect } from "react";
 function App() {
   const currentUrl = window.location.pathname.split("/")[1];
-  const { page } = useStore((state) => state);
-  console.log(currentUrl);
+  const { page, setPage } = useStore((state) => state);
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const level = params.get("level");
+    if (level) {
+      setPage(Number(level)); // URL에서 가져온 level 값으로 page 상태를 설정
+    }
+  }, [location, setPage]);
   return (
     <div className="container">
       {currentUrl !== "test" && <Header />}

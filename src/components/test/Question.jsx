@@ -1,23 +1,21 @@
 import React from "react";
 import AnswerButton from "./AnserButton";
 
-const Question = ({ questionData, onAnswerSelected }) => {
+const Question = ({ page, questionData }) => {
   const { question, options } = questionData;
-
-  const handleAnswerSelect = (score) => {
-    onAnswerSelected(score);
-  };
 
   return (
     <div className="question">
-      <p>{question}</p>
+      <p>
+        Q{page}. {question}
+      </p>
       <div className="answer-buttons">
         {options.map((option, index) => (
           <AnswerButton
             key={index}
+            index={index}
             text={option.text}
             score={option.score}
-            onSelect={handleAnswerSelect}
           />
         ))}
       </div>

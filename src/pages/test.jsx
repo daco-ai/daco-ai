@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TestHeader from "../components/common/TestHeader";
 import Button from "../components/common/Button";
 import Data from "../data/testQuestion.json";

@@ -1,23 +1,32 @@
 import React from "react";
-import AnswerButton from "./AnserButton";
+import AnwserButton from "./AnwserButton";
+import useStore from "../../stauts/store";
 
-const Question = ({ questionData, onAnswerSelected }) => {
+const Question = ({ categoryData, questionData, questionIndex }) => {
   const { question, options } = questionData;
-
-  const handleAnswerSelect = (score) => {
-    onAnswerSelected(score);
+  const { page, score, setScore } = useStore((state) => state);
+  const handleScore = (currentScore) => {
+    const updatedScore = score.map((el) => {
+      if (el.category === categoryData) {
+        el.score[questionIndex] = currentScore;
+      }
+      return el;
+    });
+    setScore(updatedScore);
   };
-
+  console.log("current Score :", score);
   return (
     <div className="question">
-      <p>{question}</p>
+      <p>
+        Q{page}. {question}
+      </p>
       <div className="answer-buttons">
         {options.map((option, index) => (
-          <AnswerButton
+          <AnwserButton
             key={index}
-            text={option.text}
-            score={option.score}
-            onSelect={handleAnswerSelect}
+            index={index}
+            option={option}
+            onSelect={handleScore}
           />
         ))}
       </div>

@@ -16,7 +16,11 @@ export default function Button({ full, text, color, func }) {
           navigate(-1);
         } else if (text === "이전") {
           decreasePage();
+          navigate(`?level=${page - 1}`);
         } else {
+          if (text === "다음" || text === "시작하기") {
+            navigate(`?level=${page + 1}`);
+          }
           func !== "" && func();
           increasePage();
         }

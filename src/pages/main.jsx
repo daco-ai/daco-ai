@@ -21,6 +21,7 @@ import Slide from "../components/common/Slide";
 import Rcmd01 from "../assets/images/rcmd_01.png";
 import Rcmd02 from "../assets/images/rcmd_02.png";
 import Rcmd03 from "../assets/images/rcmd_03.png";
+import { Link } from "react-router-dom";
 
 function Main() {
   const slideData = [
@@ -122,13 +123,13 @@ function Main() {
                 pText={"피부를 분석하여 피부 타입을 진단해드립니다."}
               />
             </div>
-            <button className="main-skintest__btn">
+            <Link to="/test" className="main-skintest__btn">
               <div className="main-skintest__depth-frame">
                 <div className="main-skintest__text-wrapper-3">
                   피부 진단 받기
                 </div>
               </div>
-            </button>
+            </Link>
           </div>
         </div>
         <div className="main-review">

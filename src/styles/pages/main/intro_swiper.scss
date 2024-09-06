@@ -1,21 +1,26 @@
 .main-frame {
   .main-intro {
     .main__overlap-group {
-      background-image: url(../../../assets/images/main_intro_bg.png);
-      background-position: 50% 50%;
-      background-size: cover;
-      height: 600px;
       position: relative;
+    }
+
+    .main__background {
+      width: 100%;
+    }
+
+    .main__background img {
+      width: 100%;
+      height: auto;
     }
 
     .main__text-wrapper {
       color: #ffffff;
-      font-family: "Raleway-Regular", Helvetica;
-      font-size: 21px;
+      font-family: "Raleway";
+      font-size: 14px;
       font-weight: 400;
-      left: 160px;
       letter-spacing: 0;
-      line-height: normal;
+      line-height: 1;
+      letter-spacing: -0.14px;
       white-space: nowrap;
     }
 
@@ -24,16 +29,17 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
-      left: 20px;
       position: absolute;
-      top: 373px;
-      width: 320px;
+      bottom: 84px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
     }
 
     .main__p {
       align-self: stretch;
       color: #ffffff;
-      font-family: "Pretendard Variable-SemiBold", Helvetica;
+      font-family: "Pretendard Variable";
       font-size: 18px;
       font-weight: 600;
       letter-spacing: -0.36px;
@@ -41,6 +47,7 @@
       margin-top: -1px;
       position: relative;
       text-align: center;
+      white-space: pre-line;
     }
 
     .main__btn {
@@ -69,6 +76,21 @@
       text-align: center;
       white-space: nowrap;
       width: fit-content;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 3px;
+      height: 6px;
+      position: relative;
+      width: 6px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #ffffff !important;
+      border-radius: 3px;
+      height: 6px;
+      position: relative;
+      width: 6px;
     }
   }
 }

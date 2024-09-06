@@ -1,3 +1,55 @@
+.main__header {
+  background-color: transparent;
+  height: 60px; // 뷰포트 높이의 10%
+  max-width: 720px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+
+  .main__wrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+  }
+
+  .logo {
+    color: #ffffff;
+    font-family: "Raleway-Regular", Helvetica;
+    font-size: 21px;
+    font-weight: 400;
+    white-space: nowrap;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .icon__right {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+  }
+
+  .img {
+    height: 24px;
+    position: relative;
+    width: 24px;
+  }
+
+  .icon__left {
+    height: 24px;
+
+    width: 24px;
+  }
+}
+
 .main-frame {
   background-color: #121212;
   height: auto;
@@ -9,7 +61,7 @@
     display: flex;
     gap: 22px;
     justify-content: center;
-    padding: 20px;
+    margin-top: 18px;
     position: relative;
 
     &__item {
@@ -41,7 +93,6 @@
 
     &__text-wrapper {
       color: #ffffff;
-      font-family: "Pretendard Variable", Helvetica;
       font-size: 14px;
       font-weight: 400;
       letter-spacing: -0.28px;
@@ -71,39 +122,44 @@
       rgb(235, 240, 244) 100%
     );
     background-color: rgba(255, 255, 255, 1);
-    height: 186px;
-    position: relative;
+    padding: 40px 20px 30px 20px;
+
     &__txt {
       align-items: flex-start;
       display: inline-flex;
       flex-direction: column;
       gap: 8px;
-      left: 20px;
-      position: absolute;
-      top: 40px;
+    }
 
-      &__text-wrapper {
-        align-self: stretch;
-        color: #ffffff;
-        font-family: "Pretendard Variable-SemiBold", Helvetica;
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: -0.4px;
-        line-height: 20px;
-        margin-top: -1px;
-        position: relative;
-      }
+    &__text-wrapper {
+      align-self: stretch;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+      line-height: 20px;
+      margin-top: -1px;
+      position: relative;
+    }
 
-      &__div {
-        align-self: stretch;
-        color: #ffffff;
-        font-family: "Pretendard Variable-Light", Helvetica;
-        font-size: 14px;
-        font-weight: 300;
-        letter-spacing: -0.28px;
-        line-height: 20px;
-        position: relative;
-      }
+    &__description {
+      color: #fff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px; /* 142.857% */
+      letter-spacing: -0.28px;
+      margin-bottom: 20px;
+    }
+
+    &__div {
+      align-self: stretch;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: -0.28px;
+      line-height: 20px;
+      position: relative;
     }
 
     &__coupon {
@@ -117,10 +173,9 @@
       justify-content: space-between;
       left: 20px;
       padding: 8px 8px 8px 12px;
-      position: absolute;
-      top: 108px;
-      width: 320px;
+      width: 100%;
     }
+
     &__frame {
       align-items: center;
       display: inline-flex;
@@ -137,7 +192,6 @@
 
     &__text-wrapper-2 {
       color: #121212;
-      font-family: "Pretendard Variable", Helvetica;
       font-size: 14px;
       font-weight: 400;
       letter-spacing: -0.28px;
@@ -161,7 +215,6 @@
 
     &__text-wrapper-3 {
       color: #ffffff;
-      font-family: "Pretendard Variable", Helvetica;
       font-size: 14px;
       font-weight: 500;
       letter-spacing: -0.28px;
@@ -170,6 +223,339 @@
       position: relative;
       white-space: nowrap;
       width: fit-content;
+    }
+  }
+
+  .main-review {
+    padding: 90px 20px;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    &__top-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__top-text {
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px; /* 100% */
+      letter-spacing: -0.4px;
+    }
+
+    &__top-num {
+      color: #a1a1a1;
+      text-align: center;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 15px */
+      letter-spacing: -0.3px;
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    &__btn-more {
+      color: #cacaca;
+      text-align: center;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 13px */
+      letter-spacing: -0.26px;
+    }
+  }
+
+  .rcmd {
+    padding-bottom: 90px;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+      gap: 8px;
+      margin-bottom: 30px;
+
+      &-title {
+        color: #fff;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; /* 100% */
+        letter-spacing: -0.4px;
+      }
+
+      &-bottom {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-desc {
+        color: #c4c4c4;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: -0.28px;
+      }
+
+      &-btn {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+
+        &-more {
+          color: #cacaca;
+          text-align: center;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%; /* 13px */
+          letter-spacing: -0.26px;
+        }
+
+        &-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .news {
+    background-color: #121212;
+    height: auto;
+    position: relative;
+    width: 100%;
+    background-image: url(../../../assets/images/newsletter_back.png);
+    background-size: 100% 100%;
+    padding: 76px 0;
+
+    &__container {
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    &__text {
+      margin-bottom: 40px;
+    }
+
+    &__text-title {
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 36px;
+      margin-top: -1px;
+      text-align: center;
+      font-family: Raleway;
+      margin-bottom: 20px;
+    }
+
+    &__text-info {
+      color: #eeeeee;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.28px;
+      line-height: 24px;
+      margin-top: -1px;
+      text-align: center;
+    }
+
+    &__field {
+      -webkit-backdrop-filter: blur(20px) brightness(100%);
+      align-items: flex-start;
+      align-self: stretch;
+      backdrop-filter: blur(20px) brightness(100%);
+      background-color: #ffffffb2;
+      border-radius: 2px;
+      display: flex;
+      height: 56px;
+      position: relative;
+      width: 100%;
+      align-items: center;
+      padding: 8px 16px;
+      justify-content: space-between;
+    }
+
+    &__field-input {
+      color: #646464;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px; /* 150% */
+      letter-spacing: -0.28px;
+      border: unset;
+      background: unset;
+    }
+
+    &__field-input:focus {
+      outline: none;
+    }
+
+    &__field-btn {
+      border-radius: 2px;
+      background: #121212;
+      border: unset;
+      height: 40px;
+      padding: 0 16px;
+      color: #ffffff;
+    }
+  }
+
+  .footer {
+    background-color: transparent;
+    padding: 100px 20px 50px 20px;
+
+    .frame {
+      align-items: flex-start;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .text-wrapper {
+      color: #ffffff;
+      font-family: "Raleway-Regular";
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 28.8px;
+      margin-top: -1px;
+      position: relative;
+      text-shadow: 0px 0px 11.37px #000000;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .div {
+      align-items: flex-start;
+      display: inline-flex;
+      flex: 0 0 auto;
+      flex-direction: column;
+      gap: 36px;
+      position: relative;
+    }
+
+    .frame-2 {
+      align-items: flex-start;
+      display: inline-flex;
+      flex: 0 0 auto;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .frame-3 {
+      align-items: flex-start;
+      display: flex;
+      flex: 0 0 auto;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+
+    .text-wrapper-2 {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.14px;
+      line-height: 14px;
+      margin-right: -8px;
+      margin-top: -1px;
+      position: relative;
+    }
+
+    .text-wrapper-3 {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.14px;
+      line-height: 14px;
+      margin-right: -8px;
+      position: relative;
+    }
+
+    .p {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.14px;
+      line-height: 14px;
+      position: relative;
+    }
+
+    .frame-4 {
+      align-items: flex-start;
+      display: flex;
+      flex: 0 0 auto;
+      gap: 12px;
+      position: relative;
+    }
+
+    .frame-5 {
+      align-items: flex-start;
+      display: inline-flex;
+      flex: 0 0 auto;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+
+    .text-wrapper-4 {
+      color: rgba(255, 255, 255, 0.8);
+
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.14px;
+      line-height: 14px;
+      margin-top: -1px;
+      position: relative;
+    }
+
+    .text-wrapper-5 {
+      color: #ffffffcc;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.14px;
+      line-height: 14px;
+    }
+
+    .text-wrapper-6 {
+      color: #ffffffcc;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.14px;
+      line-height: 14px;
+      margin-top: -1px;
+    }
+
+    .text-wrapper-7 {
+      color: #ffffffcc;
+
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.14px;
+      line-height: 14px;
     }
   }
 }

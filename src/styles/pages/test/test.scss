@@ -121,12 +121,6 @@
 
           width: 320px;
         }
-
-        .btn {
-        }
-
-        .btn.btn-active {
-        }
       }
       .question {
         gap: 4px;
@@ -135,7 +129,7 @@
           text-indent: -35px;
           padding-left: 35px;
           color: #121212;
-          font-family: "Pretendard-SemiBold", Helvetica;
+          font-family: "Pretendard Variable", Helvetica;
           font-size: 1.25rem; /* 20px */
           font-weight: 600;
           letter-spacing: -0.4px;
@@ -153,7 +147,7 @@
             border-radius: 4px;
             box-sizing: border-box;
             color: #8c8c8c;
-            font-family: "Pretendard-Medium";
+            font-family: "Pretendard Variable";
             font-size: 15px;
             font-weight: 500;
             letter-spacing: 0;
@@ -178,8 +172,6 @@
           }
         }
       }
-    }
-    .btn-group {
     }
   }
 }

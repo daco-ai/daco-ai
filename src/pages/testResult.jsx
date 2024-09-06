@@ -1,3 +1,6 @@
+import useStore from "../stauts/store";
+
 export default function TestResult() {
-  return <div>결과</div>;
+  const { score } = useStore((state) => state);
+  return <div>결과 {score[0].score[0]}</div>;
 }
